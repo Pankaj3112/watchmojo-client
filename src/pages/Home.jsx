@@ -28,6 +28,7 @@ export const Home = () => {
           autoPlay
           loop
           muted
+		  preload="auto"
         >
           <source src="/home-mobile.mp4" type="video/mp4" />
         </video>
@@ -39,6 +40,7 @@ export const Home = () => {
           autoPlay
           loop
           muted
+		  preload="auto"
         >
           <source src="/home.mp4" type="video/mp4" />
         </video>
