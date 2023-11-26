@@ -46,7 +46,7 @@ export const Home = () => {
         </video>
       )}
       <button
-        className="absolute bg-[#0000005d] hover:bg-[#0000008d] text-white text-md bottom-[23vh] p-3 rounded-lg font-thin
+        className="absolute bg-[#0000005d] hover:bg-[#0000008d] text-white text-md bottom-[15vh] md:bottom-[23vh] p-3 rounded-lg font-thin
 	  shadow-xl 
 	   "
         onClick={handleCreateRoom}
