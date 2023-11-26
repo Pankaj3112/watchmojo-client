@@ -12,8 +12,8 @@ export const Home = () => {
   };
 
   return (
-    <div className="home h-[100vh] bg-black flex items-center justify-center">
-      <video className="w-[70vw] h[70vh]  relative" autoPlay loop muted>
+    <div className="home h-[100vh] bg-black flex items-center justify-center overflow-hidden">
+      <video className="w-[100%] h-[100%] lg:w-[75%] lg:h-[75%] relative" autoPlay loop muted>
         <source src="/home.mp4" type="video/mp4" />
       </video>
       <button
