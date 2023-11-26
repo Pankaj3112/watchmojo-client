@@ -47,7 +47,7 @@ export const Home = () => {
       )}
       <button
         className="absolute bg-[#0000005d] hover:bg-[#0000008d] text-white text-md bottom-[15vh] md:bottom-[23vh] p-3 rounded-lg font-thin
-	  shadow-xl 
+	  shadow-xl w-[60%] sm:w-auto border-[1px] sm:border-0
 	   "
         onClick={handleCreateRoom}
       >

@@ -3,7 +3,5 @@
 @tailwind utilities;
 
 body{
-	width: 100vw;
-	height: 100vw;
-	overflow: hidden;
+	overflow-x: hidden;
 }
