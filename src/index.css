@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-	overflow-x: hidden;
+body {
+  overflow-x: hidden;
+}
+
+.img {
+  animation: breath 8s ease-in-out infinite alternate;
+}
+
+@keyframes breath {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.8;
+  }
 }

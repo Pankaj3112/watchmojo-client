@@ -21,33 +21,19 @@ export const Home = () => {
   };
 
   return (
-    <div className="home w-[100vw] h-[100vh] bg-black flex items-center justify-center overflow-hidden ">
-      {isMobile && (
-        <video
-          className="w-[100%] h-[100%] lg:w-[75%] lg:h-[75%] relative p-0 m-0 "
-          autoPlay
-          loop
-          muted
-		  preload="auto"
-        >
-          <source src="/home-mobile.mp4" type="video/mp4" />
-        </video>
-      )}
-
-      {!isMobile && (
-        <video
-          className="w-[100%] h-[100%] lg:w-[75%] lg:h-[75%] relative "
-          autoPlay
-          loop
-          muted
-		  preload="auto"
-        >
-          <source src="/home.mp4" type="video/mp4" />
-        </video>
-      )}
+    <div className="home w-[100vw] h-[100vh] bg-black flex items-center justify-center overflow-hidden relative">
+      <div>
+        <div className="img ml-5 scale-150 md:scale-100 lg:scale-75">
+          <img className="w-[100%]" src="/bg.png" />
+        </div>
+		<div className="text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-center w-full sm:w-[50%] p-4">
+			<p className="text-4xl mb-9 md:text-5xl">WATCHMOJO</p>
+			<p className="text-md md:text-xl">Organise mettings effortlessly without creating an account and slow planning.</p>
+		</div>
+      </div>
       <button
         className="absolute bg-[#0000005d] hover:bg-[#0000008d] text-white text-md bottom-[15vh] md:bottom-[23vh] p-3 rounded-lg font-thin
-	  shadow-xl w-[60%] sm:w-auto border-[1px] sm:border-0
+	  shadow-xl w-[60%] sm:w-[30%] md:w-56 border-[1px]
 	   "
         onClick={handleCreateRoom}
       >
