@@ -21,21 +21,20 @@ export const getToken = async (nickname, roomname) => {
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   try {
+	toast.success("Connecting please wait...", {
+		duration: 3000,
+	});
     const response = await fetch(
       `${backendUrl}/getToken?name=${nickname}&roomName=${roomname}`
     );
     const data = await response.json();
 
 	if(data.token){
-		toast.success("Connecting please wait...", {
-			position: "top-center",
-			duration: 3000,
-		});
 		return data.token;
 	}
 
 	throw new Error("Please try again later");
   } catch (e) {
-    toast.error(e.message);
+    toast.error("Something went wrong please try again later");
   }
 };
