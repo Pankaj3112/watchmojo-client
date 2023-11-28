@@ -37,11 +37,11 @@ export const Room = () => {
           className="w-[100vw] h-[100vh] bg-[#111] flex justify-center items-center
 		 [&_.lk-button]:bg-[#1e1e1e] [&_.lk-button]:text-white [&_.lk-button]:rounded-md
 		 [&_#username]:p-2 [&_#username]:rounded-md [&_#username]:bg-[#1e1e1e] [&_#username]:text-white
-		 [&_video]:rounded-md
+		 [&_.lk-video-container]:rounded-md
 		 [&_.lk-button.lk-button-menu]:bg[#181818] [&_.lk-button.lk-button-menu]:rounded-l-none 
 		 [&_.lk-device-menu_ul]:bg-blue-200 [&_.lk-device-menu_ul]:rounded-lg "
         >
-          <PreJoin onSubmit={handleJoinRoom}></PreJoin>
+          <PreJoin onSubmit={handleJoinRoom} ></PreJoin>
         </div>
       )}
       {token && (

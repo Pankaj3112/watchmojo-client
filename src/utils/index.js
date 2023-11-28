@@ -1,3 +1,5 @@
+import toast from 'react-hot-toast';
+
 const generateRandomLetter = () => {
   const alphabet = "abcdefghijklmnopqrstuvwxyz0123456789";
   const randomIndex = Math.floor(Math.random() * alphabet.length);
@@ -18,9 +20,22 @@ export const generateRandomString = () => {
 export const getToken = async (nickname, roomname) => {
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
-  const response = await fetch(
-    `${backendUrl}/getToken?name=${nickname}&roomName=${roomname}`
-  );
-  const data = await response.json();
-  return data.token;
+  try {
+    const response = await fetch(
+      `${backendUrl}/getToken?name=${nickname}&roomName=${roomname}`
+    );
+    const data = await response.json();
+
+	if(data.token){
+		toast.success("Connecting please wait...", {
+			position: "top-center",
+			duration: 3000,
+		});
+		return data.token;
+	}
+
+	throw new Error("Please try again later");
+  } catch (e) {
+    toast.error(e.message);
+  }
 };

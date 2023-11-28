@@ -1,12 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Home, Room } from "./pages";
+import { Home, Room, NotFound } from "./pages";
 import "./index.css";
-import NotFound from "./pages/NotFound";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <>
+      <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/room/:roomname" element={<Room />} />

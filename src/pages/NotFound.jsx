@@ -1,6 +1,6 @@
 import React from "react";
 
-const NotFound = () => {
+export const NotFound = () => {
   return (
     <div class="h-[100vh] w-[100vw] overflow-hidden flex justify-center items-center bg-black flex-col relative">
       <div className="img ml-5 scale-150 md:scale-100 lg:scale-75 absolute">
@@ -38,5 +38,3 @@ const NotFound = () => {
     </div>
   );
 };
-
-export default NotFound;
