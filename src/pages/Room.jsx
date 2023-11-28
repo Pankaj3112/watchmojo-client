@@ -5,7 +5,7 @@ import {
   VideoConference,
   PreJoin,
 } from "@livekit/components-react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getToken } from "../utils";
 
 // const serverUrl = "wss://video-call-ro338xk6.livekit.cloud";
@@ -15,6 +15,7 @@ export const Room = () => {
   const { roomname } = useParams();
   const [token, setToken] = useState("");
   const [choices, setChoices] = useState(null);
+  const navigate = useNavigate();
 
   const handleJoinRoom = async (userChoices) => {
     const nickname = userChoices.username;
@@ -23,6 +24,10 @@ export const Room = () => {
     const token = await getToken(nickname, roomname);
     setChoices(userChoices);
     setToken(token);
+  };
+
+  const handleDisconnected = () => {
+    navigate("/", { replace: true });
   };
 
   return (
@@ -47,6 +52,7 @@ export const Room = () => {
           serverUrl={serverUrl}
           data-lk-theme="default"
           style={{ height: "100vh" }}
+          onDisconnected={handleDisconnected}
         >
           <VideoConference />
           <CopyLink />
@@ -70,13 +76,9 @@ const CopyLink = () => {
       <button
         className="bg-[#1e1e1e] text-white rounded-md p-2 w-28"
         onClick={handleCopy}
-		disabled={copied}
+        disabled={copied}
       >
-        {copied ? (
-		  "Copied ✅"
-        ) : (
-          "Copy Link 📄"
-        )}
+        {copied ? "Copied ✅" : "Copy Link 📄"}
       </button>
     </div>
   );

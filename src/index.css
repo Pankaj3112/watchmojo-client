@@ -18,3 +18,46 @@ body {
     scale: 0.8;
   }
 }
+
+
+
+.word{
+    transition: opacity 250ms ease;
+	color: white;
+	z-index: 1;
+}
+
+.fancy-word > .letter{
+    display: inline-block;
+    transition: all 0.7s ease;
+}
+
+/* hover effect */
+
+.fancy-word:hover > .letter:nth-child(1) {
+    transform: translate(-60%, 60%) rotate(-5deg);
+}
+
+.fancy-word:hover > .letter:nth-child(2) {
+    transform: translate(-50%, 30%) rotate(4deg);
+}
+
+.fancy-word:hover > .letter:nth-child(3) {
+transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+.fancy-word:hover > .letter:nth-child(4) {
+transform: translate(10%, 15%) rotate(-8deg);
+}
+
+.fancy-word:hover > .letter:nth-child(5) {
+transform: translate(25%, -15%) rotate(5deg);
+}
+
+.fancy-word:hover > .letter:nth-child(6) {
+transform: translate(35%, 25%) rotate(-3deg);
+}
+
+.fancy-word:hover > .letter:nth-child(7) {
+    transform: translate(60%, 35%) rotate(10deg);
+}

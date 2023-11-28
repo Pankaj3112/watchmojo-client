@@ -28,7 +28,7 @@ export const Home = () => {
         </div>
 		<div className="text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-center w-full sm:w-[50%] p-4">
 			<p className="text-4xl mb-9 md:text-5xl">WATCHMOJO</p>
-			<p className="text-md md:text-xl">Organise mettings effortlessly without creating an account and slow planning.</p>
+			<p className="text-md md:text-xl font-light">Organise mettings effortlessly without creating an account and slow planning.</p>
 		</div>
       </div>
       <button
